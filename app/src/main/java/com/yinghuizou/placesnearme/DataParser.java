@@ -54,11 +54,6 @@ public class DataParser {
             latitude = jasonData.getJSONObject("geometry").getJSONObject("location").getString("lat");
             longitude = jasonData.getJSONObject("geometry").getJSONObject("location").getString("lng");
             reference = jasonData.getString("reference");
-
-
-
-
-
             //Store the data take from the jason put in to Hashmap
             googlePlaceMap.put("Hashplace_name", placeName);
             googlePlaceMap.put("Hashvicinity", vicinity);
@@ -70,15 +65,11 @@ public class DataParser {
 
             googlePlaceMap.put("international_phone_number", international_phone_number);
 
-
-
         }catch (Exception e){
             e.printStackTrace();
 
 
         }
-
-
         return googlePlaceMap;
 
 
@@ -105,21 +96,13 @@ public class DataParser {
 
                 placesList.add(placeMap);
 
-
             }catch (Exception e){
 
                 e.printStackTrace();
 
             }
-
-
-
-
             i++;
         }
-
-
-
         return placesList;
 
     }
@@ -140,9 +123,4 @@ public class DataParser {
         //Parse all the jasonData and transfer in to List of the HashMap
         return getPlaces(jsonArray);
     }
-
-
-
-
-
 }
